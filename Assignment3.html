@@ -1,0 +1,122 @@
+<html>
+
+<head>
+	<title>CS475 Assignment 3</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.css">
+</head>
+
+<body>
+	<h3 class="text-center"><u>Toys - Modelling and Rendering</u></h3>
+	<div class="container">
+		<h4>Images of the Toys: </h4>
+		<h4><b>Humanoid:</b></h4>
+		<div class="col-md-4">
+			<img src="images/Humanoid_hierarchy.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">Hierarchy</h4>
+		</div>
+		<div class="col-md-4">
+			<img src="images/Humanoid.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">Luffy</h4>
+		</div>
+	</div>
+	<div class="container" style="display:block; margin-left:auto; margin-right:auto;">
+		<h4><b>Non-Humanoid:</b></h4>
+		<div class="col-md-4">
+			<img src="images/Non-Humanoid_hierarchy.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">Hierarchy</h4>
+		</div>
+		<div class="col-md-4">
+			<img src="images/Non-Humanoid.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">Dog</h4>
+		</div>
+	</div>
+	<div class="container" style="display:block; margin-left:auto; margin-right:auto;">
+		<h4><b>Scene:</b></h4>
+		<div class="col-md-4">
+			<img src="images/Without_lights.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">Without Lights</h4>
+		</div>
+		<div class="col-md-4">
+			<img src="images/With_1light.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">With 1 light</h4>
+		</div>
+		<div class="col-md-4">
+			<img src="images/With_2light.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">With 2 lights</h4>
+		</div>
+	</div>
+	<div class="container" style="display:block; margin-left:auto; margin-right:auto;">
+		<div class="col-md-4">
+			<img src="images/With_spotlight.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">With Spotlight</h4>
+		</div>
+		<div class="col-md-4">
+			<img src="images/With_2light_spotlight.png" width="350" class="img-responsive img-rounded">
+			<h4 class="text-center">With all lights</h4>
+		</div>
+	</div>
+
+	<div class="container">
+		<h4>Features and Instructions:</h4>
+		<ul>
+			<li><h5>Run the Makefile using <code>make</code> command, to get the executable "Assignment3".</h5></li>
+			<li><h5>Using the command <code>./Assignment3</code> a window appears where we can see a Humanoid and Non-Humanoid toys in an environment.</h5></li>
+			<li><h5>There are 2 directional lights and 1 spot-light in the environment.</h5></li>
+			<li><h5>Initially the models are rendered in perspective view.</h5></li>
+		</ul>
+	</div>
+	<div class="container">
+		<h4>KeyBoard Instructions:</h4>
+		<ul>
+			<li><h5>"P" - Changes Perspective view.</h5></li>
+			<li><h5>The keys "D, A, S, W, E, Q" allow rotations along the positive and negative Y, X and Z axis respectively of the camera.</h5></li>
+			<li><h5>The key "R" helps to nullify all the applied rotations to the camera (for convenience).</h5></li>
+			<li><h5>"H" - Changes the selected model for applying transformations from Humanoid to Non-Humanoid or vice-versa. Initially the selected model is Humanoid.</h5></li>
+			<li><h5>"+/-" - For zoom in/zoom out.</h5></li>
+			<li><h5>"B" - Turns on/off directional light 1.</h5></li>
+			<li><h5>"N" - Turns on/off directional light 2.</h5></li>
+			<li><h5>"M" - Turns on/off spot-light.</h5></li>
+			<li>
+				<h5><b>Keys specific to Humanoid</b></h5>
+				<ul>
+					<li><h5>"0" - selects body</h5></li>
+					<li><h5>"1" - selects neck</h5></li>
+					<li><h5>"2" - selects right hand</h5></li>
+					<li><h5>"3" - selects right elbow</h5></li>
+					<li><h5>"4" - selects left hand</h5></li>
+					<li><h5>"5" - selects left elbow</h5></li>
+					<li><h5>"6" - selects right leg</h5></li>
+					<li><h5>"7" - selects right knee</h5></li>
+					<li><h5>"8" - selects left leg</h5></li>
+					<li><h5>"9" - selects left knee</h5></li>
+				</ul>
+			</li>
+			<li>
+				<h5><b>Keys specific to Non-Humanoid</b></h5>
+				<ul>
+					<li><h5>"0" - selects body</h5></li>
+					<li><h5>"1" - selects neck</h5></li>
+					<li><h5>"2" - selects right front leg</h5></li>
+					<li><h5>"4" - selects left front leg</h5></li>
+					<li><h5>"6" - selects right back leg</h5></li>
+					<li><h5>"8" - selects left back leg</h5></li>
+				</ul>
+			</li>
+			<li><h5>The "left/right arrows" allows the selected specific part of the model to rotate about the Y-axis, the "up/down arrows" allows rotation about the X-axis, and "PgUp/PgDn" allows rotation about the Z-axis.</h5></li>
+			<li><h5>The keys "I, K, L, J, O, U" allows translations along the positive and negative Y, X and Z axis respectively of the selected toy.</h5></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<h4>References:</h4>
+		<ul>
+			<li><h5>The base code for the assignment is taken directly from the tutorials given. <a href="https://github.com/paragchaudhuri/cs475-tutorials">https://github.com/paragchaudhuri/cs475-tutorials</a></h5></li>
+			<li><h5><a href="https://image.online-convert.com/convert-to-bmp">https://image.online-convert.com/convert-to-bmp</a> This link is used for coversion of images to bmp files.</h5></li>
+			<li><h5><a href="http://www.lighthouse3d.com/tutorials/glsl-tutorial/spotlights/">http://www.lighthouse3d.com/tutorials/glsl-tutorial/spotlights/</a> This link is used for understanding spot-light.</h5></li>
+			<li><h5><a href="https://stackoverflow.com/">Stack Overflow</a> and texture images are from <a href="https://google.com/">Google</a></h5></li>
+		</ul>
+	</div>
+</body>
+
+</html>
